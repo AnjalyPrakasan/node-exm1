@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>REGISTER HERE!</h1>
+    <div class="wrapper">
+        <form action="/api/addDataAction" method="post">
+
+            <div class="content">
+                <label>FIRST NAME:</label>
+                <input type="text" name="fname" required>
+            </div>
+            <BR>
+
+            <div class="content">
+                <label>LAST NAME:</label>
+                <input type="text" name="lname" required>
+            </div>
+            <BR>
+
+            <div class="content">
+                <label>ADDRESS:</label>
+                <textarea rows="8" cols="15" name="address" required></textarea>
+            </div>
+            <BR>
+
+            <div class="content">
+                <label>Course</label>
+                <select name="course" required>
+                    <option value="COURSE">COURSE</option>
+                    <option value="mca">MCA</option>
+                    <option value="mba">MBA</option>
+                </select>
+            </div>
+            <BR>
+
+            <div class="content">
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male" required>MALE
+                <input type="radio" name="gender" value="female" required>FEMALE
+                <input type="radio" name="gender" value="other" required>OTHER
+            </div>
+            <BR>
+
+            <div class="content">
+                <label>PHONE:</label>
+                    <input type="text" name="phone" pattern="[0-9]{10}" required>
+                </label>
+            </div>
+            <BR>
+
+            <div class="content">
+                <label>EMAIL</label>
+                <input type="email" name="email" required>
+            </div>
+            <BR>
+
+            <div class="content">
+                <button>Submit</button>
+            </div>
+
+        </form>
+    </div>
+   
+</body>
+</html>

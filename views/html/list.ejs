@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listing from db</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>FIRST NAME</td>
+            <td>LAST NAME</td>
+            <td>ADDRESS</td>
+            <td>COURSE</td>
+            <td>GENDER</td>
+            <td>PHONE</td>
+            <td>EMAIL</td>
+        </tr>
+       </thead>
+
+       <tbody>
+        <%
+          if(items.length>0)
+          {
+            for(const list of items)
+            {
+                console.log(list)
+        %>
+        
+
+        <tr>
+            <td><%= list?.fname %></td>
+            <td><%= list?.lname %></td>
+            <td><%= list?.address %></td>
+            <td><%= list?.course %></td>
+            <td><%= list?.gender %></td>
+            <td><%= list?.phone %></td>
+            <td><%= list?.email %></td>
+        </tr>
+        <%
+            }
+        %>
+       </tbody>
+       </table>
+        <%
+          }
+        else
+        {
+            %>
+            <p>NOT FOUND!</p>
+            <%
+        }
+        %>
+        
+       
+
+    
+</body>
+</html>
